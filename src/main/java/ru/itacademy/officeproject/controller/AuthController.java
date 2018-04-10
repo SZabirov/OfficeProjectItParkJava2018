@@ -28,12 +28,6 @@ public class AuthController {
 
     @GetMapping(value = {"/", "/home"})
     String home(Authentication authentication, Model model) {
-//        boolean isAuthenticated = authentication != null;
-//        model.addAttribute("isAuthenticated", isAuthenticated);
-//        if (isAuthenticated) {
-//            User user = userRepository.findByUsername(((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername());
-//            model.addAttribute("role", user.getRole());
-//        }
         return "index";
     }
 }

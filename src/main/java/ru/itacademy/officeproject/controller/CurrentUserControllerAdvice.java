@@ -9,6 +9,10 @@ import ru.itacademy.officeproject.model.CurrentUser;
 public class CurrentUserControllerAdvice {
     @ModelAttribute("currentUser")
     public CurrentUser getCurrentUser(Authentication authentication) {
-        return (authentication == null) ? null : (CurrentUser) authentication.getPrincipal();
+        if (authentication == null) {
+            return null;
+        } else {
+            return (CurrentUser) authentication.getPrincipal();
+        }
     }
 }

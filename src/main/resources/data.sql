@@ -1,2 +1,2 @@
-INSERT INTO user (username, password, role)
+INSERT INTO users (username, password, role)
 VALUES ('admin', '{noop}admin', 'ADMIN');

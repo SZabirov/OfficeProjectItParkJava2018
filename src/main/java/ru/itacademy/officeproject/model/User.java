@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,7 +13,7 @@ public class User {
     private String password;
     private String role;
 
-    @OneToMany
+    @OneToMany (mappedBy = "user")
     private Set<Achievment> achievments;
 
     public User() {

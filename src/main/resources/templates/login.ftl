@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+    }
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+    }
+    .form-signin .checkbox {
+        font-weight: 400;
+    }
+    .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>
+
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>Login page</title>
 </head>
-<body>
-<h1>Log in</h1>
+<body class="text-center">
 
-<form role="form" action="/login" method="post">
+
+<form class="form-signin" role="form" action="/login" method="post">
+    <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-    <div>
-        <label for="email">Email address</label>
-        <input type="text" name="username" id="username" required autofocus/>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required/>
-    </div>
-    <button type="submit">Sign in</button>
+
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="username" required
+           autofocus/>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="password" required/>
+
+    <button class="btn btn-success  " type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018 It-Park</p>
 </form>
 
 <#if model.error.isPresent()>
 <p>The email or password you have entered is invalid, try again.</p>
 </#if>
+
+
+
+
 </body>
 </html>

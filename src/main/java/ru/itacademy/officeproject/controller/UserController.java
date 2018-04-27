@@ -37,4 +37,10 @@ public class UserController {
             }
         }
     }
+
+    @RequestMapping("/users")
+    public String getAllUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "users";
+    }
 }

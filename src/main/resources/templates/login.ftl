@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+<head>
+<#include "links.ftl">
 <style>
     html,
     body {
@@ -73,14 +72,14 @@
 
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" class="form-control" id="inputPassword" placeholder="password" required/>
-
+    <#if model.error.isPresent()>
+        <p>The email or password you have entered is invalid, try again.</p>
+    </#if>
     <button class="btn btn-success  " type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2017-2018 It-Park</p>
+
 </form>
 
-<#if model.error.isPresent()>
-<p>The email or password you have entered is invalid, try again.</p>
-</#if>
 
 
 

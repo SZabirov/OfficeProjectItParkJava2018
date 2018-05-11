@@ -30,7 +30,7 @@
             <td><form class="form-inline my-2 my-lg-0" action="/user/sendtasktogroup" method="get">
                 <#--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
                     <input type="hidden" name="groupId" value="${group.id}"/>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Сообщение</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Отправить задачу группе</button>
             </form></td>
         </tr>
     </#list>

@@ -8,7 +8,7 @@
 <body>
 <#include "menu.ftl">
 <div class="container">
-    <h1>Отправьте сообщение группе</h1>
+    <h1>Отправьте задачу группе</h1>
     <form method="post" action="/user/sendtasktogroup">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 

@@ -21,7 +21,7 @@ public class SlackServiceImpl implements SlackService {
         Payload payload = Payload.builder()
                 .channel(user.getSlackId())
                 .username("OfficeBot")
-                .iconEmoji(":smile_cat:")
+                .iconEmoji(":owl:")
                 .text(message)
                 .build();
         Slack slack = Slack.getInstance();
@@ -34,7 +34,7 @@ public class SlackServiceImpl implements SlackService {
             Payload payload = Payload.builder()
                     .channel(user.getSlackId())
                     .username("OfficeBot")
-                    .iconEmoji(":smile_cat:")
+                    .iconEmoji(":owl:")
                     .text(message)
                     .build();
             Slack slack = Slack.getInstance();
@@ -43,36 +43,3 @@ public class SlackServiceImpl implements SlackService {
         }
     }
 }
-
-
-
-//   public SlackServiceImpl() {
-//        ApiContextInitializer.init(); // Инициализируем апи
-//        TelegramBotsApi botapi = new TelegramBotsApi();
-//        try {
-//            botapi.registerBot((LongPollingBot) this);
-//        } catch (SlackApiException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public String getBotToken() {
-//        return "529478306:AAFCGdcNs2tgyPwjwweeDyrMw3kQS6ck-08";
-//    }
-//
-//    public String getBotUsername() {
-//        return "ProjectOfficeBot";
-//    }
-//
-//    @Override
-//    public void notifyUser(User user, String message) {
-//        System.out.println("I am slack service. I am going to send message" + message + " to user with id = " + user.getId());
-//    }
-//
-//    public void onUpdateReceived(Update update) {
-//        Message msg = update.getMessage(); // Это нам понадобится
-//        String firstname = msg.getChat().getFirstName();
-//        String txt = msg.getText();
-//    }
-//
-//}

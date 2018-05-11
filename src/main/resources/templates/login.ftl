@@ -79,10 +79,5 @@
     <p class="mt-5 mb-3 text-muted">© 2017-2018 It-Park</p>
 
 </form>
-
-
-
-
-
 </body>
 </html>

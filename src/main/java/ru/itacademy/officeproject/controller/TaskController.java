@@ -27,7 +27,8 @@ public class TaskController {
     GroupService groupService;
 
     @GetMapping("/user/sendtask")
-    public String sendTask(Model model) {
+    public String sendTask(Model model, @RequestParam(required = false) Long userId) {
+        model.addAttribute("userId", userId);
         return "task";
     }
 

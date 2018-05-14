@@ -19,7 +19,7 @@
     <#list users as user>
         <tr>
             <td> ${user.id}</td>
-            <td> ${user.username}</td>
+            <td> <a href="/user/${user.id}">${user.username}</a></td>
             <td> ${user.role}</td>
             <td><form class="form-inline my-2 my-lg-0" action="/user/sendtask" method="get">
             <#--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->

@@ -11,11 +11,13 @@
     </#if>
     <#if currentUser?? && currentUser.role == "ADMIN">
         <li class="nav-item active"><a class="nav-link" href="/user/create">Добавить нового пользователя</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/createpoll">Добавить новое голосование</a></li>
     </#if>
     <#if currentUser??>
         <li class="nav-item active"><a class="nav-link" href="/user/${currentUser.id}">Профиль</a></li>
         <li class="nav-item active"><a class="nav-link" href="/groups">Группы</a></li>
         <li class="nav-item active"><a class="nav-link" href="/users">Просмотреть всех пользователей</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/polls">Голосования</a></li>
     </#if>
         </ul>
         <#if currentUser??>
